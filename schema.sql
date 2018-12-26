@@ -1,3 +1,4 @@
+-- Initialization of DB schematics
 DROP DATABASE IF EXISTS playerStatsDB;
 CREATE DATABASE playerStatsDB;
 USE playerStatsDB;
@@ -22,4 +23,6 @@ INSERT INTO poker_stats
 (player_name, player_type, player_aggression, player_winRate, player_bb_per100, games_played)
 VALUES("waveGOD1", "passive aggressive", 0.40, 0.74, 9.2, 1200);
 
+
+-- View table STATS
 SELECT * from poker_stats;
