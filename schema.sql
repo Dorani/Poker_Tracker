@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS handHistoryDB;
-CREATE DATABASE handHistoryDB;
-USE handHistoryDB;
+DROP DATABASE IF EXISTS playerStatsDB;
+CREATE DATABASE playerStatsDB;
+USE playerStatsDB;
 
-CREATE TABLE poker_hands (
+CREATE TABLE poker_stats (
   id INT NOT NULL AUTO_INCREMENT,
   player_name VARCHAR(100) NOT NULL,
   player_type VARCHAR(100) NOT NULL,
@@ -13,8 +13,8 @@ CREATE TABLE poker_hands (
   PRIMARY KEY(id)
 );
 
-INSERT INTO poker_hands
+INSERT INTO poker_stats
 (player_name, player_type, player_aggression, player_winRate, player_bb_per100, games_played)
 VALUES("waveGOD1", "passive aggressive", 0.40, 0.74, 9.2, 1200);
 
-SELECT * from poker_hands;
+SELECT * from poker_stats;
