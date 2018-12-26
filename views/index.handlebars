@@ -1,0 +1,31 @@
+<h1>PLAYER STATS</h1>
+
+<h3>Please insert your player stats in the following form</h3>
+
+<ul>
+  {{#each player}}
+  	<li>
+  	   <p>ID: {{this.id}}</p>
+       <p>player_name: {{this.player_name}}</p>
+       <p>player_type: {{this.player_type}}</p>
+       <p>player_aggression: {{this.player_aggression}}</p>
+       <p>player_winRate: {{this.player_winRate}}</p>
+       <p>player_bb_per100: {{this.player_bb_per100}}</p>
+       <p>games_played: {{this.games_played}}</p>
+  	</li>
+  {{/each}}
+</ul>
+
+<div>
+  <form action="/api/player" method="POST">
+  	<textarea type="text" name="player_name"></textarea>
+    <textarea type="text" name="player_type"></textarea>
+    <textarea type="text" name="player_aggression"></textarea>
+    <textarea type="text" name="player_winRate"></textarea>
+    <textarea type="text" name="player_bb_per100"></textarea>
+    <textarea type="text" name="games_played"></textarea>
+
+
+  	<button type="submit">Submit</button>
+  </form>
+</div>
