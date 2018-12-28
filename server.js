@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var mysql = require("mysql");
+require("console.table")
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -24,7 +25,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err){
   if (err) throw err;
-  console.log("Connection ID: " + connection.threadId);
+  console.table("Connection ID: " + connection.threadId);
   viewStats();
 });
 

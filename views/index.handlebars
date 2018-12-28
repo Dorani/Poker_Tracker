@@ -4,14 +4,16 @@
 
 <ul>
   {{#each player}}
+
   	<li>
   	   <p>ID: {{this.id}}</p>
-       <p>player_name: {{this.player_name}}</p>
-       <p>player_type: {{this.player_type}}</p>
-       <p>player_aggression: {{this.player_aggression}}</p>
-       <p>player_winRate: {{this.player_winRate}}</p>
-       <p>player_bb_per100: {{this.player_bb_per100}}</p>
-       <p>games_played: {{this.games_played}}</p>
+       <button type="submit">Update Stats</button>
+       <p><b>Player Name:</b> {{this.player_name}}</p>
+       <p><b>Player Type:</b> {{this.player_type}}</p>
+       <p><b>Player Aggression (%):</b> {{this.player_aggression}}</p>
+       <p><b>Player Win Rate (%):</b> {{this.player_winRate}}</p>
+       <p><b>Player BB/100 hands:</b>{{this.player_bb_per100}}</p>
+       <p><b>Total Games Played:</b> {{this.games_played}}</p>
   	</li>
   {{/each}}
 </ul>
