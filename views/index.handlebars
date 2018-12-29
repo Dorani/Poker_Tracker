@@ -7,8 +7,8 @@
 
   	<li>
   	   <p>ID: {{this.id}}</p>
-       <button type="submit">Update Stats</button>
-       <button type="submit">Delete Player</button>
+       <button class="btn btn-success btn-md" type="submit">Update Stats</button>
+       <button class="btn btn-danger btn-md" type="submit">Delete Player</button>
        <p><b>Player Name:</b> {{this.player_name}}</p>
        <p><b>Player Type:</b> {{this.player_type}}</p>
        <p><b>Player Aggression (%):</b> {{this.player_aggression}}</p>
@@ -18,17 +18,87 @@
   	</li>
   {{/each}}
 </ul>
+<div class="card">
+<div class="card-header">
+  <h3><strong>Add Player Stats</strong></h3>
+</div>
 
-<div>
-  <form action="/api/player" method="POST">
+<div class="form-group">
+  <form action="/api/player" method="POST" role="form">
+  <div class="form-group">
+    <h5>Player Name</h5>
   	<textarea type="text" name="player_name"></textarea>
+  </div>
+  <div class="form-group">
+    <h5>Player Type</h5>
     <textarea type="text" name="player_type"></textarea>
+  </div>
+  <div class="form-group">
+    <h5>Player Aggression (%)</h5>
     <textarea type="text" name="player_aggression"></textarea>
+  </div>
+  <div class="form-group">
+    <h5>Win Rate (%)</h5>
     <textarea type="text" name="player_winRate"></textarea>
+  </div>
+  <div class="form-group">
+    <h5>BB/100</h5>
     <textarea type="text" name="player_bb_per100"></textarea>
+  </div>
+  <div class="form-group">
+    <h5>Games Played</h5>
     <textarea type="text" name="games_played"></textarea>
+  </div>
 
 
-  	<button type="submit">Submit</button>
+  	<button class="btn btn-primary btn-md" type="submit">Submit</button>
   </form>
 </div>
+</div>
+
+<!-- <div class="row">
+
+      <div class="col-12">
+
+        <div class="card">
+          <div class="card-header">
+            <h3><strong>Add Player Stats</strong></h3>
+          </div>
+          <div class="card-body">
+            <form action="/api/player" method="POST">
+
+              <div class="form-group">
+                <label name="player_name">Name</label>
+                <input type="text" class="form-control" id="player_name">
+              </div>
+
+              <div class="form-group">
+                <label name="player_type">Player Type</label>
+                <input type="text" class="form-control" id="player_type">
+              </div>
+
+              <div class="form-group">
+                <label name="player_winRate">Win Rate</label>
+                <input type="text" class="form-control" id="player_winRate">
+              </div>
+
+              <div class="form-group">
+                <label name="player_bb_per100">Player BB/100</label>
+                <input type="text" class="form-control" id="player_bb_per100">
+              </div>
+
+              <div class="form-group">
+                <label for="games_played">Games Played</label>
+                <input type="text" class="form-control" id="games_played">
+              </div>
+
+            </form>
+            <br>
+            <div class="text-right">
+            	<button class="btn btn-primary btn-md" type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> -->
